@@ -17,10 +17,12 @@ def convert(spisok1: list) -> list:
                 for param2 in param1:
                     if param2.isdigit():
                         bufer += str(int(param2))
+                # buffer = ''.join([i for i in param1 if param2.isdigit()])
                 try:
-                    itog.append(int(bufer))
+                    buffer = int(bufer)
                 except ValueError:
-                    itog.append(None)
+                    buffer = None
+                itor.append(buffer)
         elif isinstance(param1, int):  # Проверяем числа
             itog.append(int(param1))
         else:
