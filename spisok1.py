@@ -1,10 +1,10 @@
 nums_convertation = [5, '65', '5f8', '-1', ['6'], [0], [6, 7], 'fgdg']  # Входные данные
 
 
-def convert(spisok1: list):
-    itog = []
+def convert(spisok1: list) -> :
+    itog: list = []
     for param1 in spisok1:
-        if type(param1) is list:  # Проверяем списки
+        if isinstance(param1, list):  # Проверяем списки
             try:
                 itog.append(int(param1[0] if len(param1) < 2 else None))
             except:
@@ -13,7 +13,7 @@ def convert(spisok1: list):
             try:
                 itog.append(int(param1))
             except:
-                bufer = ''
+                bufer: str = ''
                 for param2 in param1:
                     try:
                         bufer += str(int(param2))
